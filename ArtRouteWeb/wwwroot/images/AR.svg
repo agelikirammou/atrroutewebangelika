@@ -1,0 +1,14 @@
+<svg width="1140" height="560" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="562" width="1142" y="-1" x="-1"/>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m4,4l1140,0l0,560l-1140,0l0,-560z" fill="#fcd9e4"/>
+  <path stroke="null" id="svg_23" d="m392.87324,353.593157c0,5.219918 3.795775,9.917845 10.302817,9.917845l250.521132,0c5.422535,0 10.302817,-3.653943 10.302817,-9.917845l0,-172.779293l-271.126766,0l0,172.779293z" fill="#A0A1A2"/>
+  <path stroke="null" id="svg_24" d="m652.823949,139.870999l-250.521132,0c-6.507042,0 -10.302817,4.697926 -10.302817,9.917845l0,29.753534l271.126766,0l0,-29.753534c0,-5.219918 -3.795775,-9.917845 -10.302817,-9.917845" fill="#7A7A7A"/>
+  <text transform="matrix(3.873239517211914,0,0,3.72851300239563,-83.32394599914551,-84.23192568799777) " stroke="#a0234b" xml:space="preserve" text-anchor="start" font-family="Angelina" font-size="34" id="svg_35" y="103.965971" x="128.219998" fill-opacity="null" stroke-opacity="null" fill="#513535">A R</text>
+ </g>
+</svg>
