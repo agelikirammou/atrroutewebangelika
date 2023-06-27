@@ -11,23 +11,18 @@ namespace ArtRouteWeb
 {
     public class Program
     {
-        public static IConfiguration Configuration { get; private set; }
         private static WebApplicationBuilder CreateAppBuilder(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Configuration.AddJsonFile("appsettings.json", false, true)
-                                 .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json", true, true)
                                  .AddEnvironmentVariables();
-            Configuration = builder.Configuration;
-
             return builder;
         }
 
         private static void ConfigureServices(WebApplicationBuilder builder)
         {
-            builder.Services.AddControllersWithViews()
-                            .AddDataAnnotationsLocalization();
-            builder.Services.AddRazorPages();
+            builder.Services.AddControllersWithViews();
+                            //.AddDataAnnotationsLocalization();
         }
 
         public static void Main(string[] args)
@@ -35,17 +30,11 @@ namespace ArtRouteWeb
             var builder = CreateAppBuilder(args);
             ConfigureServices(builder);
             var app = builder.Build();
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
             app.UseRouting();
-
             app.MapControllerRoute(
                 name: "home",
                 pattern: "/{action=Index}",
                 defaults: new { controller = "Home" });
-            app.MapRazorPages();
-            app.MapControllers();
             app.Run();
 
 
@@ -55,11 +44,6 @@ namespace ArtRouteWeb
                 .UseIISIntegration()
                 .UseApplicationInsights()
                 .Build();
-
-
-
-
-
 
             host.Run();
         }
